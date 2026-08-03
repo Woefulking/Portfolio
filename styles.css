@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'sans-serif';
+
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 #1e293b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  body {
+    color: #f3f4f6;
+    background:
+      radial-gradient(circle at center, rgba(96, 165, 250, 0.08), transparent 60%), #0f172a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1e293b;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+  }
+}
+
+@utility main {
+  @apply relative overflow-x-hidden w-screen h-screen;
+
+  &>* {
+    @apply z-10;
+  }
+}
+
+@utility wrapper {
+  @apply relative max-w-285 mx-auto px-4 flex flex-col;
+}
+
+@utility section__title {
+  @apply text-[32px] md:text-[52px] font-bold text-gray-100;
+}
+
+@utility centered {
+  @apply text-center mb-8;
+}
+
+@utility menu__link {
+  @apply relative text-[24px] xl:text-[18px] font-medium text-slate-400 transition-colors duration-400;
+
+  &::before {
+    @apply content-[''] absolute left-0 -bottom-1 h-0.5 w-0 bg-blue-500 transition-all duration-400 ease-in-out;
+  }
+
+  &:hover,
+  &.active {
+    @apply text-gray-100;
+  }
+
+  &:hover::before,
+  &.active::before {
+    @apply w-full;
+  }
+}
+
+#burger-btn.is-active {
+  .line-1 {
+    @apply rotate-45 translate-x-1 -translate-y-0.5;
+  }
+
+  .line-2 {
+    @apply opacity-0 scale-0;
+  }
+
+  .line-3 {
+    @apply -rotate-45 translate-x-1 translate-y-0.5;
+  }
+}
+
+@utility content {
+  @apply min-h-screen flex flex-col justify-center py-20 px-4 sm:px-8 md:px-0;
+}

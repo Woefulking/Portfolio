@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anton Ukrainchenko</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="wrapper">
+            <button id="burger-btn"
+                class="fixed top-5 right-5 z-50 flex flex-col justify-between w-8 h-6 md:w-12 md:h-10 bg-transparent border-none cursor-pointer xl:hidden"
+                aria-label="Открыть меню">
+                <span
+                    class="w-full h-1 md:h-2 bg-gray-100 rounded transition-all duration-300 origin-left line-1"></span>
+                <span class="w-full h-1 md:h-2 bg-gray-100 rounded transition-all duration-300 line-2"></span>
+                <span
+                    class="w-full h-1 md:h-2 bg-gray-100 rounded transition-all duration-300 origin-left line-3"></span>
+            </button>
+            <nav id="mobile-menu"
+                class="fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-slate-900/95 backdrop-blur-sm transition-transform duration-300 translate-x-full xl:translate-x-0 xl:top-1/2 xl:-translate-y-1/2 xl:right-8.75 xl:left-auto xl:bottom-auto xl:bg-transparent xl:backdrop-blur-none">
+                <ul class="list-none flex flex-col gap-6 text-[#9ca3af] items-center xl:items-end xl:gap-4">
+                    <li class="cursor-pointer relative w-max">
+                        <a class="menu__link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="cursor-pointer relative w-max">
+                        <a class="menu__link" href="#tech">Технологический стек</a>
+                    </li>
+                    <li class="cursor-pointer relative w-max">
+                        <a class="menu__link" href="#experience">Предыдущий опыт</a>
+                    </li>
+                    <li class="cursor-pointer relative w-max">
+                        <a class="menu__link" href="#projects">Проекты</a>
+                    </li>
+                    <li class="cursor-pointer relative w-max">
+                        <a class="menu__link" href="#education">Образование</a>
+                    </li>
+                    <li class="cursor-pointer relative w-max">
+                        <a class="menu__link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section id="about">
+                <div class="content">
+                    <h1
+                        class="relative text-[40px] sm:text-[60px] md:text-[82px] font-bold leading-tight mb-6 md:mb-8 w-full md:w-max before:content-[''] before:absolute before:left-0 before:-bottom-2 before:w-full before:h-1 before:bg-blue-500 before:rounded-full">
+                        <span class="block">Антон</span>
+                        <span class="block">Украинченко</span>
+                    </h1>
+                    <p class="text-[16px] md:text-[20px] leading-relaxed text-slate-400 max-w-full lg:max-w-207.5">Я
+                        фронтенд-разработчик с 1 годом
+                        коммерческого опыта.
+                        Мои ключевые навыки:
+                        <span class="text-gray-100 font-medium">HTML</span>,
+                        <span class="text-gray-100 font-medium">CSS</span>,
+                        <span class="text-gray-100 font-medium">Javascript</span>,
+                        <span class="text-gray-100 font-medium">React</span>,
+                        <span class="text-gray-100 font-medium">TypeScript</span>
+                        <span class="text-gray-100 font-medium">Sass</span> и
+                        <span class="text-gray-100 font-medium">Tailwind</span>.
+                        Закончил магистратуру по направлению «Информатика и вычислительная техника»
+                    </p>
+                </div>
+            </section>
+            <section id="tech">
+                <div class="content">
+                    <h2 class="section__title centered">Технологии</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-start w-full">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[22px] md:text-[28px] font-semibold leading-tight mb-4 md:mb-6 text-center">
+                                Основное</h3>
+                            <div class="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6">
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="HTML5"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                    <span class="text-slate-400 text-xs md:text-base text-center">HTML5</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="CSS3"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                                    <span class="text-slate-400 text-xs md:text-base text-center">CSS3</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="JavaScript"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                    <span class="text-slate-400 text-xs md:text-base text-center">JavaScript</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="TypeScript"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                                    <span class="text-slate-400 text-xs md:text-base text-center">TypeScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[22px] md:text-[28px] font-semibol leading-tight mb-4 md:mb-6 text-center">
+                                Экосистема</h3>
+                            <div class="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6">
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="React"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                                    <span class="text-slate-400 text-center">React</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="Redux"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" />
+                                    <span class="text-slate-400 text-center">Redux</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="React Router"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" />
+                                    <span class="text-slate-400 text-center">React Router</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="Zustand"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg" />
+                                    <span class="text-slate-400 text-center">Zustand</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-[22px] md:text-[28px] font-semibol leading-tight mb-4 md:mb-6 text-center">
+                                Стилизация</h3>
+                            <div class="flex flex-row flex-wrap items-center justify-center gap-4 md:gap-6">
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1"
+                                        alt="Sass"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
+                                    <span class="text-slate-400 text-center">Sass</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-2 w-17.5 md:w-21">
+                                    <img class="cursor-pointer w-full aspect-square transition duration-300 ease-out hover:-translate-y-1
+                                        alt=" Tailwind"
+                                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                                    <span class="text-slate-400 text-center">Tailwind</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <div class="content">
+                    <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-12 w-full">
+                        <h2 class="section__title">Опыт работы</h2>
+                        <ul class="list-none w-full lg:max-w-150 flex flex-col gap-10 lg:mt-6">
+                            <li class="flex flex-col lg:flex-row gap-4 md:gap-8 items-start">
+                                <span class="text-slate-400 pt-0 md:pt-1 text-sm md:text-base md:min-w-25 block">2024
+                                    – 2025</span>
+                                <div class="flex-1">
+                                    <h3 class="text-[22px] md:text-[28px] font-semibold leading-snug mb-1">Uitdep</h3>
+                                    <span class="block mb-4 text-[16px] md:text-[18px] text-slate-400">Junior Frontend
+                                        Developer</span>
+                                    <ul class="flex flex-col gap-3 list-disc pl-5 text-slate-300">
+                                        <li class="text-[16px] leading-relaxed">Разрабатывал UI-компоненты;</li>
+                                        <li class="text-[16px] leading-relaxed">Реализовывал пользовательские формы с
+                                            клиентской валидацией и обработкой ошибок;</li>
+                                        <li class="text-[16px] leading-relaxed">Интегрировал REST API;</li>
+                                        <li class="text-[16px] leading-relaxed">Поддерживал и рефакторил существующий
+                                            код;
+                                        </li>
+                                        <li class="text-[16px] leading-relaxed">Исправление багов и улучшении
+                                            пользовательского опыта;
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="content">
+                    <h2 class="section__title centered">Проекты</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
+                        <div class="projects__item cursor-pointer bg-[#1f2937] rounded-2xl overflow-hidden max-w-full lg:max-w-138 flex flex-col gap-4 pb-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl"
+                            data-link="https://pixel-pairs.vercel.app/splash">
+                            <div
+                                class="min-h-75 bg-center bg-no-repeat bg-cover bg-[url(./images/pixel-pairs.gif)] transition-all duration-300 ease-out hover:scale-[1.02]">
+                            </div>
+                            <div class="flex-1 flex flex-col gap-2 px-5">
+                                <h3 class="text-[22px] md:text-[24px] font-bold">Pixel Pairs</h3>
+                                <p class="text-[15px] md:text-[16px] leading-relaxed text-slate-400">
+                                    Pixel Pairs is a responsive, retro-style card matching (Memory) game built with
+                                    React, TypeScript, and Tailwind CSS. It delivers a rich arcade experience with
+                                    progression, in-game economy, deep customization, and fully hand-drawn pixel-art
+                                    assets.
+                                </p>
+                            </div>
+                            <a href="https://github.com/Woefulking/Pixel-Pairs"
+                                class="mr-5 self-end transition-all duration-300 ease-out hover:opacity-50 w-10 h-10 flex items-center justify-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                    alt="github" class="w-full h-full invert projects__item-link">
+                            </a>
+                        </div>
+                        <div class="projects__item cursor-pointer bg-[#1f2937] rounded-2xl overflow-hidden max-w-full lg:max-w-138 flex flex-col gap-4 pb-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl"
+                            data-link="https://pomodoro-timer-tan-eta.vercel.app/">
+                            <div
+                                class="min-h-50 md:min-h-75 bg-center bg-no-repeat bg-cover bg-[url(./images/pomodoro.gif)] transition-all duration-300 ease-out hover:scale-[1.02]">
+                            </div>
+                            <div class="flex-1 flex flex-col gap-2 px-5">
+                                <h3 class="text-[22px] md:text-[24px] font-bold">Pomodoro Timer</h3>
+                                <p class="text-[15px] md:text-[16px] leading-relaxed text-slate-400">
+                                    A pixel-style Pomodoro Timer built with React and
+                                    TypeScript, featuring customizable timer durations, manual mode switching and sound
+                                    controls.
+                                </p>
+                            </div>
+                            <a href="https://github.com/Woefulking/Pomodoro-Timer"
+                                class="mr-5 self-end transition-all duration-300 ease-out hover:opacity-50 w-10 h-10 flex items-center justify-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                    alt="github" class="w-full h-full invert projects__item-link">
+                            </a>
+                        </div>
+                        <div class="projects__item cursor-pointer bg-[#1f2937] rounded-2xl overflow-hidden max-w-full lg:max-w-138 flex flex-col gap-4 pb-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl"
+                            data-link="https://simple-store-iota.vercel.app/">
+                            <div
+                                class="min-h-50 md:min-h-75 bg-center bg-no-repeat bg-cover bg-[url(./images/store.png)] transition-all duration-300 ease-out hover:scale-[1.02]">
+                            </div>
+                            <div class="flex-1 flex flex-col gap-2 px-5">
+                                <h3 class="text-[22px] md:text-[24px] font-bold">Simple Store</h3>
+                                <p class="text-[15px] md:text-[16px] leading-relaxed text-slate-400">
+                                    This project is a simple e-commerce frontend built with React and TypeScript. Users
+                                    can browse products, filter them, add them to the cart, place orders, and manage
+                                    their profile.
+                                </p>
+                            </div>
+                            <a href="https://github.com/Woefulking/Simple-store"
+                                class="mr-5 self-end transition-all duration-300 ease-out hover:opacity-50 w-10 h-10 flex items-center justify-center">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                    alt="github" class="w-full h-full invert projects__item-link">
+                            </a>
+                        </div>
+                        <div
+                            class="cursor-pointer bg-[#1f2937] rounded-2xl overflow-hidden max-w-138 flex flex-col gap-4 pb-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl">
+                            <div
+                                class="min-h-50 md:min-h-75 bg-center bg-no-repeat bg-cover bg-[url(./images/ozimandias.png)] transition-all duration-300 ease-out hover:scale-[1.02]">
+                            </div>
+                            <div class="flex-1 flex flex-col gap-2 px-5">
+                                <h3 class="text-[22px] md:text-[24px] font-bold">Ozimandias</h3>
+                                <p class="text-[15px] md:text-[16px] leading-relaxed text-slate-400">
+                                    My name is Ozymandias, king of kings:
+                                    Look on my works, ye Mighty, and despair!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <div class="content">
+                    <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-12 w-full">
+                        <h2 class="section__title">Образование</h2>
+                        <ul class="flex flex-col gap-10 lg:mt-6 list-none w-full lg:max-w-150">
+                            <li class="flex flex-col">
+                                <h3 class="text-[20px] md:text-[22px] font-semibold mb-4 text-gray-100">ТулГу, Тульский
+                                    государственный университет</h3>
+                                <div class="flex flex-col gap-6">
+                                    <div class="border-l-2 border-slate-700 pl-4">
+                                        <p class="text-[16px] md:text-[18px] mb-1 leading-snug">
+                                            <span class="text-blue-400 font-medium">09.04.01</span> — Информатика и
+                                            вычислительная техника (магистратура)
+                                        </p>
+                                        <span class="block text-sm md:text-base text-slate-400">2023 – 2025</span>
+                                    </div>
+                                    <div class="border-l-2 border-slate-700 pl-4">
+                                        <p class="text-[16px] md:text-[18px] mb-1 leading-snug">
+                                            <span class="text-blue-400 font-medium">09.03.01</span> — Информатика и
+                                            вычислительная техника (бакалавриат)
+                                        </p>
+                                        <span class="block text-sm md:text-base text-slate-400">2019 – 2023</span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="flex flex-col border-l-2 border-slate-700 pl-4">
+                                <h3 class="text-[20px] md:text-[22px] font-semibold mb-4 text-gray-100">Дополнительное
+                                    образование</h3>
+                                <p class="text-[16px] md:text-[18px] mb-1 leading-snug">
+                                    Управление проектами, профессиональная переподготовка
+                                </p>
+                                <span class="block text-sm md:text-base text-slate-400">2023</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="contacts">
+                <div class="content">
+                    <h2 class="section__title centered">Контакты</h2>
+                    <div
+                        class="flex flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-8 w-full flex-wrap">
+                        <a class="transition duration-300 ease-out hover:-translate-y-1 w-16 md:w-24"
+                            href="https://github.com/Woefulking" target="_blank">
+                            <img class="cursor-pointer w-full aspect-square invert" alt="github"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                        </a>
+                        <a class="transition duration-300 ease-out hover:-translate-y-1 w-16 md:w-24"
+                            href="mailto:anton.ukrainchenko.a@gmail.com">
+                            <img class="cursor-pointer w-full aspect-square " alt="gmail" src="./icons/gmail.svg" />
+                        </a>
+                        <a class="transition duration-300 ease-out hover:-translate-y-1 w-16 md:w-24"
+                            href="https://telegram.me/woefulking57" target="_blank">
+                            <img class="cursor-pointer w-full aspect-square " alt="telegram"
+                                src="./icons/telegram.svg" />
+                        </a>
+                        <a class="transition duration-300 ease-out hover:-translate-y-1 w-16 md:w-24"
+                            href="./files/CV.pdf" target="_blank">
+                            <img class="cursor-pointer w-full aspect-square " alt="pdf" src="./icons/pdf.svg" />
+                        </a>
+                    </div>
+                    <span
+                        class="self-center text-[14px] sm:text-[16px] md:text-[18px] text-slate-400 hover:text-gray-100 transition-colors duration-300 break-all text-center">anton.ukrainchenko.a@gmail.com</span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
