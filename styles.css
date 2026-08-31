@@ -24,6 +24,14 @@
     color: #f3f4f6;
     background:
       radial-gradient(circle at center, rgba(96, 165, 250, 0.08), transparent 60%), #0f172a;
+    overflow: hidden;
+
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   ::-webkit-scrollbar {
