@@ -11,9 +11,16 @@ renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 
 const starsCount = 1000;
-const positions = new Float32Array(starsCount * 3);
-
 const radius = 1.2;
+
+const stars = new THREE.Group();
+
+const sphereGeometry = new THREE.SphereGeometry(0.001, 16, 16);
+
+const sphereMaterial = new THREE.MeshBasicMaterial({
+  color: 0x4488ff,
+});
+
 for (let i = 0; i < starsCount * 3; i += 3) {
   let x, y, z, len;
   do {
@@ -23,23 +30,13 @@ for (let i = 0; i < starsCount * 3; i += 3) {
     len = Math.sqrt(x * x + y * y + z * z);
   } while (len > 1);
 
-  positions[i] = x * radius;
-  positions[i + 1] = y * radius;
-  positions[i + 2] = z * radius;
+  const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+
+  sphere.position.set(x * radius, y * radius, z * radius);
+
+  stars.add(sphere);
 }
 
-const geometry = new THREE.BufferGeometry();
-geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-const material = new THREE.PointsMaterial({
-  color: 0x4488ff,
-  size: 0.002,
-  sizeAttenuation: true,
-  depthWrite: false,
-  transparent: false,
-});
-
-const stars = new THREE.Points(geometry, material);
 scene.add(stars);
 
 function animate() {
